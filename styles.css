@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* CUSTOM PROPERTIES */
+:root{
+    --main-bg: hsl(225, 100%, 94%);
+    --card-bg: hsl(225, 100%, 98%);
+    --btn-blue: hsl(245, 75%, 52%);
+    
+    --p-color: hsl(224, 23%, 55%);
+    --h1-color: hsl(223, 47%, 23%);
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+main{
+    background-image: url("./images/pattern-background-desktop.svg");
+    min-height:100%;
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-color: var(--main-bg);
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 80%;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--card-bg);
+    max-width: 25rem;
+    border-radius: 1.5rem;
+    overflow: hidden;
+    box-shadow: 0px 10px 10px rgba(56, 41, 224, 0.1);
+}
+
+.content{
+    padding: 1rem 2rem 2rem 2rem;
+}
+
+.card h1,
+.card p{
+    text-align: center;
+    margin: 1rem;
+}
+
+.card h1{
+    color: var(--h1-color);
+    font-weight: var(--fw-900);
+    font-size: 1.7rem;
+}
+
+.card p{
+    color: var(--p-color);
+}
+
+.plan{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 1rem;
+    background-color: hsl(230, 75%, 97%);
+}
+
+.plan img{
+    max-width: none;
+    float: left;
+}
+
+.plan h3{
+    font-weight: var(--fw-700);
+}
+
+.plan ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.plan a{
+    font-weight: var(--fw-700);
+    color: var(--btn-blue);
+}
+.plan a:hover{
+    text-decoration: none;
+    opacity: 0.7;
+}
+
+.plan p{
+    margin: 0;
+    padding: 0;
+}
+
+.btn{
+    width: 100%;
+    background-color: var(--btn-blue);
+    color: var(--card-bg);
+    font-weight: var(--fw-700);
+    padding: 1rem;
+    border-radius: 0.9rem;
+    border-style: none;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+.transparent{
+    background-color: var(--card-bg);
+    color: var(--p-color);
+}
+
+.btn:first-of-type:hover{
+    opacity: 0.7;
+}
+
+.transparent:hover{
+    color: black;
+}
+
+@media screen and (max-width:450px){
+    main{
+        background-image: url("./images/pattern-background-mobile.svg");
+    }
+
+    .card{
+        width: 90%;
+    }
+
+    .plan{
+        width: 100%;
+    }
+    
+}
