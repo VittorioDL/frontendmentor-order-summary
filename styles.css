@@ -219,9 +219,9 @@ main{
 }
 
 @media (max-width: 300px){
-    .plan{ 
-        display: flex; 
-        justify-content: space-between; 
-        flex-direction: column; 
+    .plan{
+         display: flex; 
+         justify-content: space-between; 
+         flex-direction: column; 
     }
 }
