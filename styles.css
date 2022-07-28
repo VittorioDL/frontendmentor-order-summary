@@ -204,7 +204,7 @@ main{
     color: black;
 }
 
-@media screen and (max-width:450px){
+@media screen and (max-width: 450px){
     main{
         background-image: url("./images/pattern-background-mobile.svg");
     }
@@ -216,5 +216,12 @@ main{
     .plan{
         width: 100%;
     }
-    
+}
+
+@media (max-width: 300px){
+    .plan{ 
+        display: flex; 
+        justify-content: space-between; 
+        flex-direction: column; 
+    }
 }
